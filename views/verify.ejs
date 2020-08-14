@@ -1,0 +1,16 @@
+<%- include ('header.ejs') %>
+
+<% if(message) { %>
+    <div class="alert alert-danger" role="alert">
+        <%= message %>	
+    </div>
+<% } %>
+    
+<div class="container" style="margin-top: 10vh;">
+    <div class="d-flex justify-content-center">
+        <h2>We sent an email please verify.</h2>
+    </div>
+    
+</div>
+    
+<%- include ('footer.ejs') %>

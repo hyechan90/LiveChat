@@ -1,0 +1,23 @@
+<%- include ('./header') %> <% if(message) { %>
+<div class="alert alert-danger" role="alert">
+	<%= message %>
+</div>
+<% } %> <% if(success) { %>
+<div class="alert alert-success" role="alert">
+	<%= success %>
+</div>
+<% } %>
+
+<div class="container" style="margin-top: 10vh;">
+	<div class="row row-cols-2">
+		<% if(rooms) {%> <% rooms.forEach(element => { %>
+		<a href="/room/<%=element.id %>" class="nav-link">
+			<div class="col text-center bg-dark " style="margin-top: 1vh;">
+				<p>제목 : <%= element.title%></p>
+				<p class="text-center">인원 수 : <%=element.userCount%>명</p>
+			</div></a
+		>
+		<%});%> <% }%>
+	</div>
+</div>
+<%- include('./footer') %>
