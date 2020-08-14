@@ -124,7 +124,7 @@ async function sendMail(user) {
 
 	// send mail with defined transport object
 	await transporter.sendMail({
-		from: `"Live Chat" <hyechan90@naver.com>`, // sender address
+		from: `"Live Chat" <${process.env.email}>`, // sender address
 		to: user.email, // list of receivers
 		subject: 'Please Verify Your Email(Live Chat)', // Subject line
 		html: `<h1>Thank You, ${user.name}!</h1> <p>Click on the link below to verify</p> <a href="http://localhost:3000/user/verify?key=${user._id}">Click Here!</a>`,
